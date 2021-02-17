@@ -1,13 +1,14 @@
-#include "ArrayBasedStack.h"
-#include "StackInterface.h"
+//#include "ArrayBasedStack.h"
+//#include "StackInterface.h"
+#include "ArrayBasedStackImp.cpp"
 #include <iostream>
 using namespace std;
 
 
 int main()
 {
-    //StackInterface<int>* aCharStack = new ArrayBasedStack<int>();
-    StackInterface<T>* aCharStack = new ArrayBasedStack<T>();
+    StackInterface<int>* aCharStack = new ArrayBasedStack<int>();
+    //StackInterface<T>* aCharStack = new ArrayBasedStack<T>();
 
     aCharStack->push(2);
     aCharStack->push(3);

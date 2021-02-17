@@ -13,7 +13,7 @@ public:
 
     // Adds a new entry to the top of the stack
     //  @param newEntry added to the top of the stack
-    virtual T push(T newEntry) = 0;
+    virtual void push(T newEntry) = 0;
 
     // @return the item at the top of the stack
     // @throws EmptyStackException if the stack is empty before the operation
