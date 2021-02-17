@@ -1,36 +1,43 @@
 
 #include "StackInterface.h"
 #include "ArrayBasedStack.h"
+using namespace std;
 
-ArrayBasedStack::ArrayBasedStack() {
+template <typename T>
+ArrayBasedStack<T>::ArrayBasedStack<T>() {
     top = -1;
-    int arr[10];
+    T arr[10];
 }
 
-void ArrayBasedStack::push(int newEntry) {
+template <typename T>
+void ArrayBasedStack<T>::push(T newEntry) {
     top++;
     arr[top] = newEntry;
 }
 
 
-int ArrayBasedStack::peek() {
+template <typename T>
+T ArrayBasedStack<T>::peek() {
     int tmp = arr[top];
     return tmp;
 }
 
 
-int ArrayBasedStack::pop() {
+template <typename T>
+T ArrayBasedStack<T>::pop() {
     int tmp = arr[top];
     top--;
     return tmp;
 }
 
 
-bool ArrayBasedStack::isEmpty() {
+template <typename T>
+bool ArrayBasedStack<T>::isEmpty() {
     return top == 0;
 }
 
 
-void ArrayBasedStack::clear() {
+template <typename T>
+void ArrayBasedStack<T>::clear() {
     top = 0;
 }

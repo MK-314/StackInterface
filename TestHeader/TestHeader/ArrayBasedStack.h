@@ -1,15 +1,17 @@
 #pragma once
 #include "StackInterface.h"
+using namespace std;
 
-class ArrayBasedStack : public StackInterface
+template <typename T>
+class ArrayBasedStack : public StackInterface<T>
 {
-    int top;
-    int arr[10];
 public:
+    T top;
+    T arr[10];
     ArrayBasedStack();
-    void push(int newEntry);
-    int pop();
-    int peek();
+    void push(T newEntry);
+    T pop();
+    T peek();
     bool isEmpty();
     void clear();
 };
